@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --fonte: "Montserrat", sans-serif;
+    --nav: #9195F6;
+    --main: #B7C9F2;
+    --copyright: #B7C9F2;
+    --footer: #FFFFFF;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte);
+}
+
+
+#banner{
+    display: flex;
+    padding: 5rem 10rem;
+    justify-content: space-around;
+    background: linear-gradient(to bottom, var(--main), white);
+}
+
+#banner-text h1{
+    font-size: 3rem;
+    font-weight: 300;
+    padding-right: 30%;
+    color: var(--footer);
+}
+
+#banner-text button{
+    display: flex;
+    justify-content: space-around;
+    border: none;
+    border-radius: 0.7rem;
+    padding: 0.8rem 1.2rem ;
+    background-color: var(--main);
+    font-size: 1rem;
+    font-weight: 100;
+    cursor:pointer;
+}
+
+#units{
+    background: linear-gradient(to bottom, var(--footer), var(--main));
+    margin: 3rem;
+    border-radius: 4rem;
+}
+
+#units-title h2{
+    padding-top: 3rem;
+    padding-left: 5rem;
+    font-size: 3rem;
+    color: var(--main);
+    border-color: black;
+
+}
+
+#units img{
+    width: 17rem;
+    height: auto;
+    border-radius: 1rem;
+}
+
+#units-grid{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-around;
+    align-items: center;
+}
+#units-grid h3{
+
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    text-align: center;
+    margin: 0.5rem auto;
+    max-width: 16rem; /* Defina o valor desejado para a largura máxima do texto */
+}
+
+.unit-image{
+    border-radius: 1rem;
+    background-color: var(--main);
+    margin:1rem;
+    height: 15rem;
+    max-width: 17rem;
+    transition: transform 0.3s ease;
+    cursor:pointer
+
+}
+#problem-impact {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.problem-impact-text {
+    background-color: var(--main);
+    width:  100vw;
+    padding-top: 20px;
+}
+
+
+#problem{
+    padding:1rem;
+    border-radius: 1rem;
+}
+#problem p{
+    list-style-type: decimal;
+    font-size: 1.3rem;
+
+}
+#problem h2{
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--nav);
+}
+#problem h3{
+    font-size: 1.4rem;
+    color: var(--nav);
+}
+
+#problem-impact li {
+    color: var(--nav);
+    list-style: none;
+}
+
+#problem-solving{
+    padding:1rem;
+    border-radius: 1rem;
+}
+#problem-solving p{
+    list-style-type: decimal;
+    font-size: 1.3rem;
+
+}
+#problem-solving h2{
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--nav);
+}
+#problem-solving h3{
+    font-size: 1.4rem;
+    color: var(--nav);
+}
+
+@media (max-width: 1201px) {
+    #banner {
+      padding: 4rem; 
+    }
+  
+    #units-grid {
+      grid-template-columns: repeat(3, auto); 
+    }
+  
+    #banner-text h1 {
+      padding-right: 20%; 
+      font-size: 2.5rem; 
+    }
+  }
+
+  @media (min-width: 901px) and (max-width: 1200px) {
+    #banner {
+      padding: 3rem 8rem; 
+    }
+  
+    #units-grid {
+      grid-template-columns: repeat(2, auto); 
+    }
+  
+    #banner-text h1, #units-title h2 {
+      font-size: 2.8rem; 
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    #banner, #problem-impact, .problem-impact-text {
+      padding: 2rem; 
+    }
+  
+    #banner-text h1, #units-title h2 {
+      font-size: 2.5rem; 
+    }
+  
+    #units-grid {
+      grid-template-columns: 1fr 1fr; 
+    }
+  
+    #units img, .unit-image {
+      width: auto; 
+      height: auto; 
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #banner {
+      padding: 1rem; 
+      flex-direction: column;
+    }
+  
+    #banner-text h1 {
+      font-size: 2rem; 
+      padding-right: 0; 
+    }
+  
+    #banner-text button, #units img, .unit-image {
+      width: auto; 
+      margin: 0 auto; 
+    }
+  
+    #units-grid {
+      grid-template-columns: 1fr; 
+    }
+  
+    .problem-impact-text, #problem, #problem-solving {
+      width: auto; 
+      padding: 10px; 
+    }
+  }
+  
