@@ -1,5 +1,10 @@
 import {} from 'react';
 import './style_footer.css';
+import Logo_HC from '../../assets/img/logo HC.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faInstagram, faFacebookF, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 function Footer() {
@@ -9,16 +14,16 @@ function Footer() {
       <div id="footer_content">
           <div id="footer_contacts">
               <p>Em parceria com:</p>
-                  <img src="logo HC.svg" alt=""/>
+                  <img src={Logo_HC} alt=""/>
                   <div id="footer_social_media">
                       <a href="#" className="footer-link" id="instagram">
-                          <i className="fa-brands fa-instagram"></i>
+                        <FontAwesomeIcon icon={faInstagram} />
                       </a>
                       <a href="#" className="footer-link" id="facebook">
-                          <i className="fa-brands fa-facebook-f"></i>
+                        <FontAwesomeIcon icon={faFacebookF} />
                       </a>
                       <a href="#" className="footer-link" id="whatsapp">
-                          <i className="fa-brands fa-whatsapp"></i>
+                        <FontAwesomeIcon icon={faWhatsapp} />
                       </a>
                   </div>
           </div>
@@ -59,7 +64,7 @@ function Footer() {
                   <div id="input_group">
                       <input type="email" id="email"/>
                       <button>
-                          <i className="fa-regular fa-envelope"></i>
+                        <FontAwesomeIcon icon={faEnvelope} />
                       </button>
                   </div>
           </div>
